@@ -35,7 +35,7 @@ DAMAGE.
 												// The executable ChunkPLY can help by partitioning the mesh into more manageable chunks
 												// (each of which is small enough to be represented using 32-bit indexing.)
 						
-#undef FAST_COMPILE								// If enabled, only a single version of the code is compiled
+#define FAST_COMPILE								// If enabled, only a single version of the code is compiled
 #undef SHOW_WARNINGS							// Display compilation warnings
 #undef ARRAY_DEBUG								// If enabled, array access is tested for validity
 #undef USE_SEG_FAULT_HANDLER					// Tries to dump a stack trace in the case of a segfault (gcc only)

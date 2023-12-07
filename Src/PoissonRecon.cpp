@@ -1141,13 +1141,15 @@ int main( int argc , char* argv[] )
 		if( !factory.plyValidReadProperties<1>( readFlags ) ) ERROR_OUT( "Ply file does not contain normals" );
 		delete[] readFlags;
 
-		if( unprocessedProperties.size() ) Execute< Real >( FEMSigs() , VertexFactory::DynamicFactory< Real >( unprocessedProperties ) );
-		else                               Execute< Real >( FEMSigs() , VertexFactory::EmptyFactory< Real >() );
+		//if( unprocessedProperties.size() ) Execute< Real >( FEMSigs() , VertexFactory::DynamicFactory< Real >( unprocessedProperties ) );
+		//else                               
+		Execute< Real >( FEMSigs() , VertexFactory::EmptyFactory< Real >() );
 	}
 	else
 	{
-		if( Colors.set ) Execute< Real >( FEMSigs() , VertexFactory::RGBColorFactory< Real >() );
-		else             Execute< Real >( FEMSigs() , VertexFactory::EmptyFactory< Real >() );
+		//if( Colors.set ) Execute< Real >( FEMSigs() , VertexFactory::RGBColorFactory< Real >() );
+		//else             
+		Execute< Real >( FEMSigs() , VertexFactory::EmptyFactory< Real >() );
 	}
 	delete[] ext;
 #else // !FAST_COMPILE
